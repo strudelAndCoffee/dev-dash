@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../../models');
+const { User } = require('../../models');
 
 // /api/users
 
@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
     })
     .then(userData => {
         if (!userData) {
-            res.status(404).json({ message: "No user found with that id." });
+            res.status(404).json({ message: "No user found with that ID." });
             return;
         }
         res.json(userData)
@@ -56,7 +56,7 @@ router.put('/:id', (req, res) => {
     })
     .then(userData => {
         if (!userData[0]) {
-            res.status(404).json({ message: "No user found with that id." });
+            res.status(404).json({ message: "No user found with that ID." });
             return;
         }
         res.json(userData)
@@ -76,7 +76,7 @@ router.delete('/:id', (req, res) => {
     })
     .then(userData => {
         if (!userData) {
-            res.status(404).json({ message: "No user found with that id." });
+            res.status(404).json({ message: "No user found with that ID." });
             return;
         }
         res.json(userData)
