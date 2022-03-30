@@ -1,11 +1,29 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
+const withAuth = require("../../utils/auth");
 
 // /api/posts
 
 // GET all posts
 router.get('/', (req, res) => {
-    Post.findAll()
+    Post.findAll({
+        order: [['created_at', 'DESC']],
+        attributes: ['id', 'title', 'text', 'created_at'],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'user_id', 'text', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
     .then(postData => res.json(postData))
     .catch(err => {
         console.log(err);
@@ -18,7 +36,22 @@ router.get('/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
-        }
+        },
+        attributes: ['id', 'title', 'text', 'created_at'],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'user_id', 'text', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
     })
     .then(postData => {
         if (!postData) {
@@ -34,7 +67,7 @@ router.get('/:id', (req, res) => {
 });
 
 // CREATE a post
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         text: req.body.text,
@@ -48,7 +81,7 @@ router.post('/', (req, res) => {
 });
 
 // UPDATE a post
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(req.body, {
         where: {
             id: req.params.id
@@ -68,7 +101,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE a post
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
             id: req.params.id
