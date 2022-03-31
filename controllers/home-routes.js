@@ -1,9 +1,8 @@
-// const router = require('express').Router();
-// // const sequelize = require('../config/connection');
+const router = require('express').Router();
 
-// router.get('/', (req, res) => {
-//     console.log("Connected");
-//     res.json({ message: "Connected" });
-// });
+router.get('/', (req, res) => {
+    console.log("Connected");
+    res.render('homepage');
+});
 
-// module.exports = router;
+module.exports = router;
