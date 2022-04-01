@@ -1,10 +1,15 @@
-<ul>
+<section>
     {{#each posts as |post|}}
-    <li>
-        <a href="/post/{{post.id}}">
-            <h2>{{post.title}}</h2>
-            <p>Posted by {{post.user.username}}</p>
-        </a>
-    </li>
+    <div class="post-item">
+        <div class="post-item-head">
+            <a href="/post/{{post.id}}" class="post-link">
+                {{post.title}}
+            </a>
+        </div>
+        <div class="post-item-info">
+            <p>Posted by {{post.user.username}} on {{format_date post.created_at}}</p>
+            <p>Comments: {{post.comments.length}}</p>
+        </div>
+    </div>
     {{/each}}
-</ul>
+</section>
