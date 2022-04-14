@@ -36,11 +36,19 @@ router.get('/', (req, res) => {
 
 // displays login.handlebars
 router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     res.render('login');
 });
 
 // displays signup.handlebars
 router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     res.render('signup');
 });
 
