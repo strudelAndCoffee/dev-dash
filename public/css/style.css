@@ -1,0 +1,37 @@
+/* GLOBAL settings */
+* {
+    margin: 0;
+}
+
+/* HEADER section */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.header-title {
+    flex: 0 0 50%;
+}
+
+.header-nav {
+    flex: 0 1 50%;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.header-nav a {
+    padding: 0 8px;
+}
+
+/* MAIN section */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}

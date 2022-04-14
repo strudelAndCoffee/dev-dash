@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
 
-  <body class="text-center">
-    <header>
-      <h1>Dev Dash</h1>
-      <nav>
+  <body>
+    <header class="header-container">
+      <div class="header-title">
+        <h1>Dev Dash</h1>
+        <p>Delivering the latest news in computer science</p>
+      </div>
+      <nav class="header-nav">
         <a href="/" class="nav-link">Home</a>
         {{#if loggedIn}}
         <a href="/dashboard" class="nav-link">Dashboard</a>
@@ -22,7 +25,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main-container">
         {{{body}}}
     </main>
   </body>
