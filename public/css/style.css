@@ -36,9 +36,13 @@
     padding-right: 5%;
 }
 
-.header-nav a {
+.nav-link {
     padding: 0 8px;
     font-size: 2em;
+}
+
+.nav-btn {
+    padding: 0 8px;
 }
 
 /***____HOMEPAGE____***/
