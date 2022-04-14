@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-/* title and subtitle */
+/* title portion */
 .header-title {
     flex: 0 0 50%;
 }
@@ -28,21 +28,31 @@
 .header-title p {
     font-size: 2em;
 }
-
-/* nav bar */
-.header-nav {
+/* user-nav portion */
+.header-user-nav {
     flex: 0 1 50%;
+    text-align: center;
+}
+
+.header-username {
     text-align: right;
-    padding-right: 5%;
+    margin-bottom: 15px;
+    padding-right: 10%;
+}
+
+.nav-bar {
+    text-align: right;
+    padding-right: 10%;
 }
 
 .nav-link {
     padding: 0 8px;
-    font-size: 2em;
+    font-size: 20px;
 }
 
 .nav-btn {
     padding: 0 8px;
+    font-size: 15px;
 }
 
 /***____HOMEPAGE____***/

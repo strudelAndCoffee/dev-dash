@@ -14,16 +14,21 @@
         <h1>Dev Dash</h1>
         <p>Delivering the latest news in computer science</p>
       </div>
-      <nav class="header-nav">
-        <a href="/" class="nav-link">Home</a>
+      <div class="header-user-nav">
         {{#if loggedIn}}
-        <a href="/dashboard" class="nav-link">Dashboard</a>
-        <button id="logout" class="nav-btn">Logout</button>
-        {{else}}
-        <a href="/login" class="nav-link">Login</a>
-        <a href="/signup" class="nav-link">Sign Up</a>
+        <p class="header-username">Welcome, <span>{{username}}</span></p>
         {{/if}}
-      </nav>
+        <nav class="nav-bar">
+          <a href="/" class="nav-link">Home</a>
+          {{#if loggedIn}}
+          <a href="/dashboard" class="nav-link">Dashboard</a>
+          <button id="logout" class="nav-btn">Logout</button>
+          {{else}}
+          <a href="/login" class="nav-link">Login</a>
+          <a href="/signup" class="nav-link">Sign Up</a>
+          {{/if}}
+        </nav>
+      </div>
     </header>
 
     {{{body}}}
