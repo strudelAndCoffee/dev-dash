@@ -39,6 +39,11 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// displays signup.handlebars
+router.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
 // displays single-post.handlebars with matching id's post data data
 router.get('/post/:id', (req, res) => {
     Post.findOne({

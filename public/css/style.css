@@ -1,9 +1,12 @@
 /* GLOBAL settings */
 * {
     margin: 0;
+    text-decoration: none;
 }
 
-/* HEADER section */
+/***____MAIN____***/
+/* __HEADER section__ */
+/* container */
 .header-container {
     display: flex;
     flex-direction: row;
@@ -13,10 +16,20 @@
     width: 100%;
 }
 
+/* title and subtitle */
 .header-title {
     flex: 0 0 50%;
 }
 
+.header-title h1 {
+    font-size: 4em;
+}
+
+.header-title p {
+    font-size: 2em;
+}
+
+/* nav bar */
 .header-nav {
     flex: 0 1 50%;
     text-align: right;
@@ -25,13 +38,59 @@
 
 .header-nav a {
     padding: 0 8px;
+    font-size: 2em;
 }
 
-/* MAIN section */
-.main-container {
+/***____HOMEPAGE____***/
+/* __POSTS LIST section__ */
+.posts-list {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    height: 75%;
+}
+
+.post-item {
+    height: 100px;
+    margin-top: 10px;
+}
+
+/***____LOGIN/SIGNUP____***/
+.form-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10%;
+    padding: 2em 3em;
+}
+
+.form-input {
+    margin: 1em;
+    height: 3em;
+    width: 30vw;
+}
+
+.form-input input {
+    font-size: 20px;
+    height: 2em;
+    width: 100%;
+}
+
+.form-btn {
+    margin: 1.5em;
+    height: 3em;
+    width: 12vw;
+    font-size: 22px;
 }
