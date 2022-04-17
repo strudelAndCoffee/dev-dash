@@ -1,9 +1,18 @@
-<div class="post-full">
-    <div class="post-head">
-        <span class="post-title">{{post.title}}</span>
-        <span class="post-meta">Posted by {{post.user.username}} on {{format_date post.created_at}}</span>
+<section class="post-full">
+    <div class="post-full-card">
+        <div class="post-head">
+            <h2 class="post-title">{{post.title}}</h2>
+            <h3 class="post-meta">Posted by <span class="username">{{post.user.username}}</span> on {{format_date post.created_at}}</h3>
+        </div>
+        <div class="post-text">{{post.text}}</div>
     </div>
-    <div class="post-text">{{post.text}}</div>
-</div>
 
-{{> comments post.comments }}
+    {{#if userId}}
+    <form id="add-comment" class="add-comment-form">
+        <textarea id="comment-text" class="comment-text" type="text" placeholder="Leave a comment here"></textarea>
+        <button id="add-comment-btn" class="btn">Add Comment</button>
+    </form>
+    {{/if}}
+
+    {{> comments post.comments }}
+</section>

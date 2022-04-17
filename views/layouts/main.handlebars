@@ -12,11 +12,11 @@
     <header class="header-container">
       <div class="header-title">
         <h1>Dev Dash</h1>
-        <p>Delivering the latest news in computer science</p>
+        <p>tech, code, computer science blog</p>
       </div>
       <div class="header-user-nav">
         {{#if loggedIn}}
-        <p class="header-username">Welcome, <span>{{username}}</span></p>
+        <p class="header-username">Welcome, <span class="username">{{username}}</span></p>
         {{/if}}
         <nav class="nav-bar">
           <a href="/" class="nav-link">Home</a>
@@ -31,7 +31,9 @@
       </div>
     </header>
 
+    <main>
     {{{body}}}
+    </main>
 
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>

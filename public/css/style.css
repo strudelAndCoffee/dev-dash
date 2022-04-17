@@ -1,4 +1,8 @@
 /* GLOBAL settings */
+:root {
+    --primary: green;
+}
+
 * {
     margin: 0;
     text-decoration: none;
@@ -38,6 +42,11 @@
     text-align: right;
     margin-bottom: 15px;
     padding-right: 10%;
+    font-size: 22px;
+}
+
+.username{
+    color: var(--primary);
 }
 
 .nav-bar {
@@ -107,4 +116,21 @@
     height: 3em;
     width: 12vw;
     font-size: 22px;
+}
+
+/***____SINGLE-POST____***/
+.post-full {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.post-full-card {
+    width: 70vw;
+    border: 1px solid black;
+}
+
+/***____CREATE POST____***/
+.new-post-text {
+    height: 20vw;
+    width: 30vw;
 }

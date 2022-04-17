@@ -1,3 +1,8 @@
+<div class="create-post">
+    <a href="/dashboard/create" class="btn">Create New Post</button>
+</div>
+
+{{#if posts.length}}
 <section class="posts-list">
     {{#each posts as |post|}}
     <div class="post-item">
@@ -7,9 +12,12 @@
             </a>
         </div>
         <div class="post-item-info">
-            <p>Posted by <span class="username">{{post.user.username}}</span> on {{format_date post.created_at}}</p>
+            <p>Posted on {{format_date post.created_at}}</p>
             <p>Comments: {{post.comments.length}}</p>
         </div>
     </div>
     {{/each}}
 </section>
+{{/if}}
+
+<script src="/js/dashboard.js"></script>
