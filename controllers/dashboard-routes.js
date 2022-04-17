@@ -3,7 +3,7 @@ const { Post, Comment, User } = require('../models');
 const withAuth = require("../utils/auth");
 
 // render dashboard.handlebars
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     if (!req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
 });
 
 // render create-post.handlebars
-router.get('/create', (req, res) => {
+router.get('/create', withAuth, (req, res) => {
     if (!req.session.loggedIn) {
         res.redirect('/');
         return;
