@@ -7,12 +7,18 @@
         <div class="post-text">{{post.text}}</div>
     </div>
 
+    {{#if loggedIn}}
     {{#if userId}}
-    <form id="add-comment" class="add-comment-form">
+    <form id="add-comment-form" class="add-comment-form">
         <textarea id="comment-text" class="comment-text" type="text" placeholder="Leave a comment here"></textarea>
         <button id="add-comment-btn" class="btn">Add Comment</button>
     </form>
     {{/if}}
+    {{/if}}
 
     {{> comments post.comments }}
 </section>
+
+{{#if userId}}
+<script src="/js/comment.js"></script>
+{{/if}}

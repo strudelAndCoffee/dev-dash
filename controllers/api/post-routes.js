@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
         text: req.body.text,
         user_id: req.session.user_id
     })
-    .then(postrData => res.json(postrData))
+    .then(postData => res.json(postData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
