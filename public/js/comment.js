@@ -18,7 +18,7 @@ function commentFormHandler(event) {
             if (response.ok) {
                 document.location.replace(`/post/${postId}`);
             } else {
-                alert("Bad request");
+                alert(response.statusText);
             }
         });
     } else {

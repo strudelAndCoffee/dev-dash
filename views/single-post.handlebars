@@ -1,4 +1,8 @@
 <section class="post-full">
+    {{#if currentUser}}
+    <button id="edit-post" class="btn">Edit Post</button>
+    <button id="delete-post" class="btn">Delete Post</button>
+    {{/if}}
     <div class="post-full-card">
         <div class="post-head">
             <h2 class="post-title">{{post.title}}</h2>
@@ -7,18 +11,23 @@
         <div class="post-text">{{post.text}}</div>
     </div>
 
-    {{#if loggedIn}}
-    {{#if userId}}
-    <form id="add-comment-form" class="add-comment-form">
-        <textarea id="comment-text" class="comment-text" type="text" placeholder="Leave a comment here"></textarea>
-        <button id="add-comment-btn" class="btn">Add Comment</button>
-    </form>
-    {{/if}}
-    {{/if}}
-
     {{> comments post.comments }}
+
+    {{#if currentUser}}
+    {{else}}
+        {{#if loggedIn}}
+        <form id="add-comment-form" class="add-comment-form">
+            <textarea id="comment-text" class="comment-text" type="text" placeholder="Leave a comment here"></textarea>
+            <button id="add-comment-btn" class="btn">Add Comment</button>
+        </form>
+        {{/if}}
+    {{/if}}
 </section>
 
-{{#if userId}}
-<script src="/js/comment.js"></script>
+{{#if loggedIn}}
+    {{#if currentUser}}
+    <script src="/js/edit-delete.js"></script>
+    {{else}}
+    <script src="/js/comment.js"></script>
+    {{/if}}
 {{/if}}

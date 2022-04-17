@@ -82,17 +82,17 @@ router.get('/post/:id', (req, res) => {
         }
 
         const post = postData.get({ plain: true });
-        let notCurrentUser = true;
+        let isCurrentUser = false;
 
         if (req.session.user_id == post.user.id) {
-            notCurrentUser = false;
+            isCurrentUser = true;
         }
 
         res.render('single-post', {
             post,
             loggedIn: req.session.loggedIn,
             username: req.session.username,
-            userId: notCurrentUser
+            currentUser: isCurrentUser
         });
     })
     .catch(err => {
