@@ -8,11 +8,14 @@ const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
 
+// 15 minutes for cookie timeout when session is created
+const expTime = 900000;
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 const sess = {
     secret: '42',
-    cookie: {},
+    cookie: { maxAge: expTime },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
