@@ -179,7 +179,7 @@ footer p {
 
 /* Post Item */
 .post-item {
-    background-color: darkgray;
+    background-color: white;
     border-radius: 10px 0 10px 0;
     box-shadow: 1px 1px 2px black;
     margin: 8px;
@@ -218,7 +218,7 @@ footer p {
 .post-comment-badge {
     background-color: var(--bg-dark);
     color: white;
-    padding: 3px 0 2px 5px;
+    padding: 3px 5px 2px 5px;
     margin: 5px 0 0 5px;
     width: max-content;
     border-radius: 10px 0 10px 0;
@@ -269,11 +269,12 @@ footer p {
 .post-title {
     font-size: 33px;
     text-align: center;
-    padding: 8px 0 3px 0;
+    padding-top: 8px;
 }
 
 .post-meta {
     text-align: right;
+    padding: 0 6px 3px 0;
 }
 
 .post-body {

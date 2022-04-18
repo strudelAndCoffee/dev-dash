@@ -1,27 +1,40 @@
-<section class="post-full">
-    {{#if currentUser}}
-    <button id="edit-post" class="btn">Edit Post</button>
-    <button id="delete-post" class="btn">Delete Post</button>
-    {{/if}}
-    <div class="post-full-card">
-        <div class="post-head">
-            <h2 class="post-title">{{post.title}}</h2>
-            <h3 class="post-meta">Posted by <span class="username">{{post.user.username}}</span> on {{format_date post.created_at}}</h3>
+<section class="single-post">
+    <div class="post-container">
+        {{#if currentUser}}
+        <div class="post-buttons">
+            <button id="edit-post" class="btn warning">Edit Post</button>
+            <button id="delete-post" class="btn danger">Delete Post</button>
         </div>
-        <div class="post-text">{{post.text}}</div>
-    </div>
-
-    {{> comments post.comments }}
-
-    {{#if currentUser}}
-    {{else}}
-        {{#if loggedIn}}
-        <form id="add-comment-form" class="add-comment-form">
-            <textarea id="comment-text" class="comment-text" type="text" placeholder="Leave a comment here"></textarea>
-            <button id="add-comment-btn" class="btn">Add Comment</button>
-        </form>
         {{/if}}
-    {{/if}}
+        <div class="post">
+          <div class="post-head">
+              <h2 class="post-title">{{post.title}}</h2>
+              <p class="post-meta"><span class="username">{{post.user.username}}</span> ({{format_date post.created_at}})</p>
+          </div>
+          <div class="post-body">
+            <span class="post-text">
+              {{post.text}}
+            </span>
+          </div>
+        </div>
+
+        <div class="comments">
+            <div class="comment-list">
+                {{> comments post.comments }}
+            </div>
+            {{#if currentUser}}
+            {{else}}
+                {{#if loggedIn}}
+                <div class="add-comment-container">
+                    <form id="add-comment-form" class="add-comment-form">
+                        <textarea id="comment-text" class="add-comment-text" type="text" placeholder="Leave a comment here"></textarea>
+                        <button id="add-comment-btn" class="btn">Add Comment</button>
+                    </form>
+                </div>
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
 </section>
 
 {{#if loggedIn}}
