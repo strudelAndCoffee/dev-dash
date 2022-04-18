@@ -14,7 +14,7 @@
         <h1>Dev Dash</h1>
         <p>tech, code, computer science blog</p>
       </div>
-      <div class="header-user-nav">
+      <div class="header-nav">
         {{#if loggedIn}}
         <p class="header-username">Welcome, <span class="username">{{username}}</span></p>
         {{/if}}
@@ -34,6 +34,12 @@
     <main>
     {{{body}}}
     </main>
+
+    <footer>
+      <p>
+        Thanks for visiting!
+      </p>
+    </footer>
 
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
