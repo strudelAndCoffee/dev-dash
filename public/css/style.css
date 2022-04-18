@@ -1,11 +1,13 @@
 /* GLOBAL SETTINGS */
 :root {
-    --primary: forestGreen;
+    --primary: rgb(55, 221, 55);
     --secondary: cyan;
     --third: blue;
     --bg-dark: rgb(33, 33, 33);
     --bg-light: rgb(251, 245, 240);
     --btn: rgb(165, 229, 255);
+    --warning: rgb(255, 195, 84);
+    --danger: rgb(255, 59, 59);
 }
 
 * {
@@ -65,17 +67,31 @@ button:hover {
 }
 
 .btn {
-    background-color: var(--btn);
-    color: var(--bg-dark);
-    padding: 4px 10px;
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    padding: 5px 12px;
     border-radius: 5px;
     box-shadow: 1px 1px 3px var(--btn);
+    font-size: 17px;
+    width: 170px;
 }
 
 .btn:hover {
     transition: 0.3s all ease;
-    color: black;
+    color: var(--bg-dark);
     background-color: var(--secondary);
+}
+
+.warning:hover {
+    transition: 0.3s all ease;
+    color: var(--bg-dark);
+    background-color: var(--warning);
+}
+
+.danger:hover {
+    transition: 0.3s all ease;
+    color: var(--bg-dark);
+    background-color: var(--danger);
 }
 
 /* MAIN LAYOUT */
@@ -100,12 +116,14 @@ button:hover {
     font-size: 4em;
     font-style: italic;
     padding-left: 2%;
+    text-shadow: -2px -2px 1px white;
 }
 
 .header-title p {
     font-size: 2em;
     padding-left: 6%;
     padding-bottom: 3px;
+    text-shadow: 0 0 2px white;
 }
 
 .header-nav {
@@ -214,20 +232,29 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Post */
+.post-container {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--bg-light);
+    width: 75vw;
 }
 
 .post-buttons {
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
-    width: 20vw;
+    width: 25vw;
 }
 
 .post {
     border-radius: 15px 15px 0 0;
     box-shadow: 1px 1px 3px black;
-    width: 75vw;
+    width: 100%;
     margin: 10px 0;
     display: flex;
     flex-direction: column;
@@ -240,9 +267,9 @@ footer p {
 }
 
 .post-title {
-    font-size: 30px;
+    font-size: 33px;
     text-align: center;
-    padding: 8px 0 5px 0;
+    padding: 8px 0 3px 0;
 }
 
 .post-meta {
@@ -258,4 +285,48 @@ footer p {
     padding-left: 45px; 
     font-size: 19px;
     line-height: 1.5;
+}
+
+/* Comments */
+.comments {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 65vw;
+    margin-top: 10px;
+}
+
+.comment-list {
+    width: 30vw;
+}
+
+.comment-item {
+    background-color: var(--bg-dark);
+    border-radius: 10px;
+    padding: 4px 10px;
+    margin: 3px 0;
+}
+
+.comment-item-text {
+    color: var(--bg-light);
+    padding-bottom: 8px;
+}
+
+.comment-item-meta {
+    color: var(--secondary);
+    text-align: right;
+}
+
+.add-comment-container {
+    width: 30vw;
+}
+
+.add-comment-text {
+    width: 28vw;
+    height: 12vh;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 19px;
 }

@@ -32,13 +32,13 @@
       <main>
 
 
-
-        <section class="single-post">
+      <section class="single-post">
+        <div class="post-container">
 
           <!-- {{#if currentUser}} -->
           <div class="post-buttons">
-            <button id="edit-post" class="btn">Edit Post</button>
-            <button id="delete-post" class="btn">Delete Post</button>
+            <button id="edit-post" class="btn warning">Edit Post</button>
+            <button id="delete-post" class="btn danger">Delete Post</button>
           </div>
           <!-- {{/if}} -->
           <div class="post">
@@ -53,32 +53,57 @@
               </span>
             </div>
           </div>
+
+        </div>
       
         <!-- {{> comments post.comments }} -->
-        <section class="comments">
+        <div class="comments">
           <!-- {{#each this}} -->
+        <div class="comment-list">
+                     <!-- comment -->
           <div class="comment-item">
-            <div class="comment-item-head">
-                By <span class="username">{{user.username}}</span> on {{format_date created_at}}
-            </div>
             <div class="comment-item-text">
-                {{text}}
+              {{text}}
+            </div>
+            <div class="comment-item-meta">
+                <span class="username">{{user.username}}</span> {{format_date created_at}}
             </div>
           </div>
+                     <!-- comment -->
+          <div class="comment-item">
+            <div class="comment-item-text">
+              dsafdgfjkgjhgxfdzghcjghfgfd
+            </div>
+            <div class="comment-item-meta">
+                <span class="username">{{user.username}}</span> {{format_date created_at}}
+            </div>
+          </div>
+                     <!-- comment -->
+          <div class="comment-item">
+            <div class="comment-item-text">
+              yes!
+            </div>
+            <div class="comment-item-meta">
+                <span class="username">{{user.username}}</span> {{format_date created_at}}
+            </div>
+          </div>
+        </div>
           <!-- {{/each}} -->
-        <!-- {{#if currentUser}}
+          
+          <!-- {{#if currentUser}}
               {{else}}
             {{#if loggedIn}} -->
-          <form id="add-comment-form" class="add-comment-form">
-            <textarea id="comment-text" class="add-comment-text" type="text" placeholder="Leave a comment here"></textarea>
-            <button id="add-comment-btn" class="btn">Add Comment</button>
-          </form>
-          <!-- {{/if}}
-          {{/if}} -->
-        </section>
-      
+          <div class="add-comment-container">
+            <form id="add-comment-form" class="add-comment-form">
+              <textarea id="comment-text" class="add-comment-text" type="text" placeholder="Leave a comment here"></textarea>
+              <button id="add-comment-btn" class="btn">Add Comment</button>
+            </form>
+          </div>
+            <!-- {{/if}}
+            {{/if}} -->
+            
+        </div>
       </section>
-
 
 
       </main>
