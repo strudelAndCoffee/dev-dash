@@ -15,10 +15,10 @@
     <header class="header-container">
       <div class="header-title">
         <h1>Dev Dash</h1>
-        <p>tech, code, computer science blog</p>
+        <p>{ tech, code, computer science }</p>
       </div>
       <div class="header-nav">
-        <p class="header-username">Welcome, <span class="username">username</span></p>
+        <p class="header-username">Welcome( <span class="username">username</span> )</p>
         <nav class="nav-bar">
           <a href="/" class="nav-link">Home</a>
           <a href="/dashboard" class="nav-link">Dashboard</a>
@@ -29,69 +29,58 @@
       </div>
     </header>
 
-      <main class="main-container">
-        <section class="post-list">
-                    <!-- single post -->
-          <div class="post-item">
-              <div class="post-item-head">
-                  <a href="/post/{{post.id}}" class="post-title">POST NAME</a>
-                  <span class="post-meta">Posted by <span class="username">username</span> on 4/17/22</span>
-              </div>
-              <div class="post-item-body">
-                <span class="post-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus.
-                </span>
-                <div class="post-comment-badge">
-                  Comments: <span class="data">3</span>
-                </div>
-              </div>
+      <main>
+
+
+
+        <section class="single-post">
+
+          <!-- {{#if currentUser}} -->
+          <div class="post-buttons">
+            <button id="edit-post" class="btn">Edit Post</button>
+            <button id="delete-post" class="btn">Delete Post</button>
           </div>
-                    <!-- single post -->
-          <div class="post-item">
-              <div class="post-item-head">
-                  <a href="/post/{{post.id}}" class="post-title">POST NAME</a>
-                  <span class="post-meta">Posted by <span class="username">username</span> on 4/17/22</span>
-              </div>
-              <div class="post-item-body">
-                <span class="post-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus.
-                </span>
-                <div class="post-comment-badge">
-                  Comments: <span class="data">3</span>
-                </div>
-              </div>
+          <!-- {{/if}} -->
+          <div class="post">
+            <div class="post-head">
+                <h2 class="post-title">{{post.title}}</h2>
+                <p class="post-meta"><span class="username">{{post.user.username}}</span></p>
+                <p class="post-meta">{{format_date post.created_at}}</p>
+            </div>
+            <div class="post-body">
+              <span class="post-text">
+                {{post.text}} Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptatibus nemo, eos ad fugiat velit, libero ex sequi nobis impedit debitis necessitatibus itaque recusandae omnis? Praesentium fuga pariatur dolorem saepe!
+              </span>
+            </div>
           </div>
-                    <!-- single post -->
-          <div class="post-item">
-              <div class="post-item-head">
-                  <a href="/post/{{post.id}}" class="post-title">POST NAME</a>
-                  <span class="post-meta">Posted by <span class="username">username</span> on 4/17/22</span>
-              </div>
-              <div class="post-item-body">
-                <span class="post-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus.
-                </span>
-                <div class="post-comment-badge">
-                  Comments: <span class="data">3</span>
-                </div>
-              </div>
+      
+        <!-- {{> comments post.comments }} -->
+        <section class="comments">
+          <!-- {{#each this}} -->
+          <div class="comment-item">
+            <div class="comment-item-head">
+                By <span class="username">{{user.username}}</span> on {{format_date created_at}}
+            </div>
+            <div class="comment-item-text">
+                {{text}}
+            </div>
           </div>
-                    <!-- single post -->
-          <div class="post-item">
-              <div class="post-item-head">
-                  <a href="/post/{{post.id}}" class="post-title">POST NAME</a>
-                  <span class="post-meta">Posted by <span class="username">username</span> on 4/17/22</span>
-              </div>
-              <div class="post-item-body">
-                <span class="post-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus.
-                </span>
-                <div class="post-comment-badge">
-                  Comments: <span class="data">3</span>
-                </div>
-              </div>
-          </div>
+          <!-- {{/each}} -->
+        <!-- {{#if currentUser}}
+              {{else}}
+            {{#if loggedIn}} -->
+          <form id="add-comment-form" class="add-comment-form">
+            <textarea id="comment-text" class="add-comment-text" type="text" placeholder="Leave a comment here"></textarea>
+            <button id="add-comment-btn" class="btn">Add Comment</button>
+          </form>
+          <!-- {{/if}}
+          {{/if}} -->
+        </section>
+      
       </section>
+
+
+
       </main>
 
       <footer>
