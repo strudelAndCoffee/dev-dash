@@ -164,6 +164,10 @@ button:hover {
     font-weight: bold;
 }
 
+.nav-location:hover {
+    cursor: default;
+}
+
 /* Footer */
 footer {
     position: fixed;
