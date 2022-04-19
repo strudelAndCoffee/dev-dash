@@ -16,7 +16,7 @@
       </div>
       <div class="header-nav">
         {{#if loggedIn}}
-        <p class="header-username">Welcome, <span class="username">{{username}}</span></p>
+        <p class="header-username">Welcome( <span class="username">{{username}}</span> )</p>
         {{else}}
         <p class="header-username">
           <br />
@@ -25,9 +25,9 @@
         <nav class="nav-bar">
 
           {{#if isHome}}
-          <span class="nav-location">Home</span>
+          <span class="nav-location no-bar">Home</span>
           {{else}}
-          <a href="/" class="nav-link">Home</a>
+          <a href="/" class="nav-link no-bar">Home</a>
           {{/if}}
 
           {{#if loggedIn}}
