@@ -28,7 +28,8 @@ router.get('/', (req, res) => {
         res.render('homepage', {
             posts,
             loggedIn: req.session.loggedIn,
-            username: req.session.username
+            username: req.session.username,
+            isHome: true
         });
     })
     .catch(err => {
@@ -43,7 +44,7 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
-    res.render('login');
+    res.render('login', { isLogin: true });
 });
 
 // displays signup.handlebars
@@ -52,7 +53,7 @@ router.get('/signup', (req, res) => {
         res.redirect('/');
         return;
     }
-    res.render('signup');
+    res.render('signup', { isSignup: true });
 });
 
 // displays single-post.handlebars with matching id's post data data

@@ -23,13 +23,31 @@
         </p>
         {{/if}}
         <nav class="nav-bar">
-          <a href="/" class="nav-link">Home</a>
-          {{#if loggedIn}}
-          <a href="/dashboard" class="nav-link">Dashboard</a>
-          <button id="logout" class="nav-btn">Logout</button>
+
+          {{#if isHome}}
+          <span class="nav-location">Home</span>
           {{else}}
-          <a href="/login" class="nav-link">Login</a>
-          <a href="/signup" class="nav-link">Sign Up</a>
+          <a href="/" class="nav-link">Home</a>
+          {{/if}}
+
+          {{#if loggedIn}}
+            {{#if isDash}}
+            <span class="nav-location">Dashboard</span>
+            {{else}}
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            {{/if}}
+            <button id="logout" class="nav-btn">Logout</button>
+          {{else}}
+            {{#if isLogin}}
+            <span class="nav-location">Login</span>
+            {{else}}
+            <a href="/login" class="nav-link">Login</a>
+            {{/if}}
+            {{#if isSignup}}
+            <span class="nav-location">Sign Up</span>
+            {{else}}
+            <a href="/signup" class="nav-link">Sign Up</a>
+            {{/if}}
           {{/if}}
         </nav>
       </div>

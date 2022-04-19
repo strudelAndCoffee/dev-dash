@@ -36,7 +36,8 @@ router.get('/', withAuth, (req, res) => {
         res.render('dashboard', {
             posts,
             loggedIn: req.session.loggedIn,
-            username: req.session.username
+            username: req.session.username,
+            isDash: true
         });
     })
     .catch(err => {

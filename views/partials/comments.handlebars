@@ -3,11 +3,8 @@
     <div class="comment-item-text">
       <p>{{text}}</p>
     </div>
-    <div class="comment-item-meta">
-        <span class="username">{{user.username}}</span> ({{format_date created_at}})
-    </div>
-    <div class="comment-item-btn-wrapper">
-      <button id="delete-comment-btn" class="comment-btn">Delete</button>
+    <div class="comment-item-footer">
+      <span class="username">{{user.username}}</span> ({{format_date created_at}})
     </div>
   </div>
 {{/each}}

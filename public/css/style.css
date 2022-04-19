@@ -28,9 +28,8 @@ a {
 }
 
 a:hover {
-    transition: 0.5s all ease;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+    transition: 0.3s all ease;
+    color: var(--bg-light);
 }
 
 a:visited {
@@ -54,7 +53,6 @@ button {
 button:hover {
     transition: 0.3s all ease;
     color: var(--bg-light);
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
 }
 
 .username{
@@ -117,14 +115,14 @@ button:hover {
     font-size: 4em;
     font-style: italic;
     padding-left: 2%;
-    text-shadow: -2px -2px 1px white;
+    text-shadow: -2px -2px 1px var(--bg-light);
 }
 
 .header-title p {
     font-size: 2em;
     padding-left: 6%;
     padding-bottom: 3px;
-    text-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px var(--bg-light);
 }
 
 .header-nav {
@@ -149,8 +147,21 @@ button:hover {
     padding: 0 12px;
 }
 
+.nav-link:hover {
+    transition: 0.3s all ease;
+    color: var(--bg-light);
+}
+
 .nav-btn {
     padding: 0 12px;
+}
+
+.nav-location {
+    padding: 0 11px;
+    color: var(--bg-light);
+    border-bottom: 2px solid var(--bg-light);
+    font-size: 22px;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -219,7 +230,7 @@ footer p {
 
 .post-comment-badge {
     background-color: var(--bg-dark);
-    color: white;
+    color: var(--bg-light);
     padding: 3px 5px 2px 5px;
     margin: 5px 0 0 5px;
     width: max-content;
@@ -323,13 +334,9 @@ footer p {
     overflow-wrap: break-word;
 }
 
-.comment-item-meta {
+.comment-item-footer {
     color: var(--secondary);
     text-align: right;
-}
-
-.comment-item-btn-wrapper {
-
 }
 
 .add-comment-container {
