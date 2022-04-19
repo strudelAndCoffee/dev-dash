@@ -22,18 +22,18 @@ const userData = [
 const postData = [
     {
         user_id: 1,
-        title: "Aaron's Post 1",
-        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus."
+        title: "My first post",
+        text: "This is a short post."
     },
     {
         user_id: 1,
-        title: "Aaron's Post 2",
+        title: "My experience with...",
         text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus."
     },
     {
         user_id: 1,
-        title: "Aaron's Post 3",
-        text: "This is a short post."
+        title: "Here's the latest on this new tech!",
+        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus."
     },
     {
         user_id: 2,
@@ -49,6 +49,11 @@ const postData = [
         user_id: 3,
         title: "What I think about this topic...",
         text: "This is also a fairly short post, for variety"
+    },
+    {
+        user_id: 2,
+        title: "This New Tech Is Awesome!",
+        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus. Doloribus blanditiis autem quaerat natus? Eos maiores distinctio cum, autem ipsum odio numquam alias neque quibusdam eius excepturi, quos vel recusandae voluptatibus."
     }
 ];
 
