@@ -1,12 +1,15 @@
-<form id="post-form" class="new-post">
-    <div>
-        <label for="post-title">Title</label>
-        <input id="post-title" type="text">
-    </div>
-    <div>
-        <textarea id="post-text" class="new-post-text" type="text" placeholder="What would you like to write about?"></textarea>
-    </div>
-    <button id="save-post-btn" class="btn">Save Changes</button>
-</form>
+<section class="create-post-container">
+    <form id="new-post" class="create-post-form">
+        <div>
+            <input id="post-title" type="text" class="create-post-title">
+        </div>
+        <div>
+            <textarea id="post-text" class="create-post-text" type="text"></textarea>
+        </div>
+        <div class="submit-btn-wrapper">
+            <button id="save-post-btn" class="btn form-btn">Save Changes</button>
+        </div>
+    </form>
+</section>
 
 <script src="/js/save.js"></script>
