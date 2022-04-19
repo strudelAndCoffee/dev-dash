@@ -216,8 +216,8 @@ footer p {
 }
 
 .post-item-title {
-    font-size: 19px;
-    padding-left: 7px;
+    font-size: 21px;
+    padding: 3px 0 2px 12px;
 }
 
 .post-item-title:hover {
