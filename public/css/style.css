@@ -420,7 +420,7 @@ footer p {
 }
 
 /* MOBILE/TABLET SIZING */
-@media screen and (max-width: 8420px) {
+@media screen and (max-width: 842px) {
     .header-container {
         display: flex;
         flex-direction: column;

@@ -66,7 +66,10 @@ router.get('/edit/:id', withAuth, (req, res) => {
         return;
     }
 
-    res.render('edit-post');
+    res.render('edit-post', {
+        loggedIn: req.session.loggedIn,
+        username: req.session.username
+    });
 });
 
 module.exports = router;
