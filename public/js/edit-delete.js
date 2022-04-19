@@ -11,16 +11,20 @@ function deleteBtnHandler(event) {
 
     const postId = window.location.pathname.toString().split('/')[2];
 
-    fetch(`/api/posts/${postId}`, {
-        method: 'DELETE'
-    })
-    .then(response => {
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert(response.statusText);
-        }
-    })
+    let confirmDelete = confirm("Are you sure you want to delete this post?");
+
+    if (confirmDelete) {
+        fetch(`/api/posts/${postId}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (response.ok) {
+                document.location.replace('/dashboard');
+            } else {
+                alert(response.statusText);
+            }
+        })
+    }
 };
 
 document.querySelector('#edit-post').addEventListener('click', editBtnHandler);
