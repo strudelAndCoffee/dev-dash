@@ -1,4 +1,4 @@
-# dev-dash
+# Dev-Dash
 
 ![License badge](https://img.shields.io/badge/License-MIT-green)
 
