@@ -17,6 +17,10 @@
       <div class="header-nav">
         {{#if loggedIn}}
         <p class="header-username">Welcome, <span class="username">{{username}}</span></p>
+        {{else}}
+        <p class="header-username">
+          <br />
+        </p>
         {{/if}}
         <nav class="nav-bar">
           <a href="/" class="nav-link">Home</a>

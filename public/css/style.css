@@ -229,6 +229,10 @@ footer p {
     float: right;
 }
 
+.create-btn-wrapper {
+    margin: 12px 0;
+}
+
 /* ============ */
 /* SINGLE-POST */
 .single-post {
@@ -358,7 +362,7 @@ footer p {
     margin-bottom: 20px;
 }
 
-.btn-wrapper {
+.submit-btn-wrapper {
     text-align: center;
 }
 
