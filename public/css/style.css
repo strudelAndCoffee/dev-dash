@@ -128,7 +128,7 @@ button:hover {
 .header-nav {
     background-color: var(--bg-dark);
     color: var(--secondary);
-    flex: 0 1 45%;
+    flex: 0 0 45%;
 }
 
 .header-username {
@@ -139,12 +139,13 @@ button:hover {
 }
 
 .nav-bar {
-    text-align: center;
+    text-align: right;
     padding-top: 29px;
+    padding-right: 70px;
 }
 
 .nav-link {
-    padding: 0 12px;
+    padding: 0 35px;
 }
 
 .nav-link:hover {
@@ -153,13 +154,12 @@ button:hover {
 }
 
 .nav-btn {
-    padding: 0 12px;
+    padding: 0 35px;
 }
 
 .nav-location {
-    padding: 0 11px;
+    padding: 0 34px;
     color: var(--bg-light);
-    border-bottom: 2px solid var(--bg-light);
     font-size: 22px;
     font-weight: bold;
 }
@@ -207,7 +207,6 @@ footer p {
     background-color: var(--bg-dark);
     border-radius: 10px 0 0 0;
     color: var(--secondary);
-    padding: 3px;
     margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
@@ -217,6 +216,11 @@ footer p {
 .post-item-title {
     font-size: 19px;
     padding-left: 7px;
+}
+
+.post-item-title:hover {
+    transition: 0.3s all ease;
+    color: var(--bg-light);
 }
 
 .post-item-meta {
