@@ -320,11 +320,16 @@ footer p {
 .comment-item-text {
     color: var(--bg-light);
     padding-bottom: 8px;
+    overflow-wrap: break-word;
 }
 
 .comment-item-meta {
     color: var(--secondary);
     text-align: right;
+}
+
+.comment-item-btn-wrapper {
+
 }
 
 .add-comment-container {
