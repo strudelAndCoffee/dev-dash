@@ -22,8 +22,6 @@
             <div class="comment-list">
                 {{> comments post.comments }}
             </div>
-            {{#if currentUser}}
-            {{else}}
                 {{#if loggedIn}}
                 <div class="add-comment-container">
                     <form id="add-comment-form" class="add-comment-form">
@@ -32,7 +30,7 @@
                     </form>
                 </div>
                 {{/if}}
-            {{/if}}
+            </div>
         </div>
     </div>
 </section>
@@ -40,7 +38,6 @@
 {{#if loggedIn}}
     {{#if currentUser}}
     <script src="/js/edit-delete.js"></script>
-    {{else}}
-    <script src="/js/comment.js"></script>
     {{/if}}
+    <script src="/js/comment.js"></script>
 {{/if}}
