@@ -14,7 +14,7 @@
 Visit live site at:
 [Dev Dash](https://cryptic-peak-17894.herokuapp.com/)
 
-Dev Dash is a CMS style blog site for tech/code/comupter-science enthusiasts. A user can view and comment on posts from fellow users, as well as write and manage their own posts.
+Dev Dash is a CMS style blog site for tech/code/computer-science enthusiasts. A user can view and comment on posts from fellow users, as well as write and manage their own posts.
 
 ## Usage
 
